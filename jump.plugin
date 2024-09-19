@@ -5,8 +5,8 @@
 #!version = 1.0
 
 [Script]
-http-request ^https?:\/\/.*jumpapp.*\/ads\/.* script-response-body reject-ad.js
-http-response ^https?:\/\/.*jumpapp.*\/ads\/.* requires-body=1,script-response-body reject-ad.js
+http-request ^https?:\/\/.*jumpapp.*\/ads\/.* script-response-body https://raw.githubusercontent.com/kitoyui/loon/main/reject-ad.js
+http-response ^https?:\/\/.*jumpapp.*\/ads\/.* requires-body=1,script-response-body https://raw.githubusercontent.com/kitoyui/loon/main/reject-ad.js
 
 [MITM]
 hostname = *.jumpapp.*
